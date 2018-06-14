@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>Kōdingu Math Application</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<section>
+			<input type="radio" name="controls" id="start">
+			<input type="radio" name="controls" id="stop">
+			<input type="radio" name="controls" id="reset">
+			<div class="stopwatch">
+				<div class="cell"><span class="num ten ten_hour">0 1 2 3 4 5 6 7 8 9</span></div>
+				<div class="cell"><span class="num ten hour">0 1 2 3 4 5 6 7 8 9</span></div>
+				<div class="cell"><span class="num">:</span></div>
+				<div class="cell"><span class="num sex ten_minu">0 1 2 3 4 5</span></div>
+				<div class="cell"><span class="num ten minu">0 1 2 3 4 5 6 7 8 9</span></div>
+				<div class="cell"><span class="num">:</span></div>
+				<div class="cell"><span class="num sex ten_sec">0 1 2 3 4 5</span></div>
+				<div class="cell"><span class="num ten sec">0 1 2 3 4 5 6 7 8 9</span></div>
+				<div class="cell"><span class="num">:</span></div>
+				<div class="cell"><span class="num ten hund_mill">0 1 2 3 4 5 6 7 8 9</span></div>
+				<div class="cell"><span class="num ten ten_mill">0 1 2 3 4 5 6 7 8 9</span></div>
+				<div class="cell"><span class="num ten mill">0 1 2 3 4 5 6 7 8 9</span></div>
+			</div>
+			<div class="control">
+				<label for="start">Start</label>
+				<label for="stop">Stop</label>
+				<label for="reset">Reset</label>
+			</div>
+		</section>
+
+		<div class="grid">
+			<div id="quiz">
+				<h1>Simultaneous Linear Equations in Two variables</h1>
+				<hr style="margin-bottom: 20px">
+				<p id="question"></p>
+				<p id="scores"></p>
+				<div class="buttons">
+					<button id="btn0">A1<span id="choice0"></span></button>
+					<button id="btn1">A2<span id="choice1"></span></button>
+					<button id="btn2">A3<span id="choice2"></span></button>
+					<button id="btn3">A4<span id="choice3"></span></button>
+				</div>
+				<hr style="margin-top: 50px">
+				<footer>
+					<p id="progress">Question x of y</p>
+					<p id="score">Current Score:</p>
+				</footer>
+			</div>
+		</div>
+
+
+
+		<script src='style.js'></script>
+
+		<script>
+			if (document.location.search.match(/type=embed/gi)) {
+				window.parent.postMessage('resize', "*");
+			}
+		</script>
+
+		<script src="game_controller.js"></script>
+		<script src="question.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
+
+<script> score = 20; </script>
